@@ -23,9 +23,10 @@ public class Reservation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idReservation;
-    Date startDate = new Date();
-    Date devolutionDate = new Date();
-    private String status = "created";
+    private Date startDate = new Date();
+    private Date devolutionDate = new Date();
+//    private String status = "created";
+    private String status;
     
     
 
@@ -73,6 +74,8 @@ public class Reservation implements Serializable {
     public void setDevolutionDate(Date devolutionDate) {
         this.devolutionDate = devolutionDate;
     }
+
+   
 
     public String getStatus() {
         return status;

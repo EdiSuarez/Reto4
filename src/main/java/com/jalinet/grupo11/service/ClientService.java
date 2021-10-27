@@ -3,6 +3,7 @@ package com.jalinet.grupo11.service;
 
 import com.jalinet.grupo11.dao.ClientRepository;
 import com.jalinet.grupo11.entities.Client;
+import com.jalinet.grupo11.resultados.CountClient;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,7 +62,7 @@ public class ClientService {
             return client;
         }
     }
-
+//==========Modificacion para reto5===========
     public boolean deleteClient(int clientId) {
         Boolean aBoolean = getClient(clientId).map(client -> {
             clientRepository.delete(client);
@@ -69,8 +70,12 @@ public class ClientService {
         }).orElse(false);
         return aBoolean;
     }
-  
-  
+//======================================================  
+// public List<CountClient> getTopClients(){
+//  
+//      return clientRepository.getTopClients();
+//  }
+//  
   
     
 }
